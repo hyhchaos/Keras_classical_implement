@@ -16,10 +16,9 @@ LR=0.01
 #load and process data
 (X_train,Y_train),(X_test,Y_test)=mnist.load_data()
 
+
 #normalize
 X_train=X_train.reshape(-1,28,28)/255
-
-print(X_train.shape)
 X_test=X_test.reshape(-1,28,28)/255
 Y_train=np_utils.to_categorical(Y_train,num_classes=10)
 Y_test=np_utils.to_categorical(Y_test,num_classes=10)
